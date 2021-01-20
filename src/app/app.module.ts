@@ -56,6 +56,7 @@ registerLocaleData(localePt);
 // syncfusion
 import { AggregateService, FilterService, GridModule, GroupService, PageService, SearchService, SortService, ToolbarService } from '@syncfusion/ej2-angular-grids';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
 
     GridModule,
+
+    NgbModule,
   ],
   providers: [
     PageService,
