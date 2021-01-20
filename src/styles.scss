@@ -1,4 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+/* SyncFusion */
+@import '../node_modules/@syncfusion/ej2-base/styles/bootstrap.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/bootstrap.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/bootstrap.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/bootstrap.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/bootstrap.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/bootstrap.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/bootstrap.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap.css';
+@import '../node_modules/@syncfusion/ej2-angular-grids/styles/bootstrap.css';
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+ejs-grid,
+form {
+  margin: 20px;
+}
+
+.field-required {
+  font-size: 10px;
+  padding  : 0;
+  margin   : 0;
+  color    : red;
+}

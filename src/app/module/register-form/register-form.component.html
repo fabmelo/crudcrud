@@ -1,3 +1,30 @@
-<p>
-  register-form works!
-</p>
+<div class="row">
+  <div class="col">
+
+    <button type="button" [disabled]="form.invalid" (click)="onSave()" class="btn btn-success btn-save">Salvar Registro</button>
+    <button type="button" (click)="onList()" class="btn btn-info btn-save">Lista de Registros</button>
+
+    <form [formGroup]="form" novalidate>
+      <div class="row">
+        <div class="col-12 col-xl-4">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" formControlName="Name" class="form-control" id="name">
+          <span class="field-required" *ngIf="f.Name.invalid && (f.Name.dirty || f.Name.touched)">Obrigatório</span>
+        </div>
+
+        <div class="col-12 col-xl-4">
+          <label for="age" class="form-label">Idade</label>
+          <input type="text" formControlName="Age" class="form-control" id="age">
+          <span class="field-required" *ngIf="f.Age.invalid && (f.Age.dirty || f.Age.touched)">Obrigatório</span>
+        </div>
+
+        <div class="col-12 col-xl-4">
+          <label for="city" class="form-label">Cidade</label>
+          <input type="text" formControlName="City" class="form-control" id="city">
+          <span class="field-required" *ngIf="f.City.invalid && (f.City.dirty || f.City.touched)">Obrigatório</span>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

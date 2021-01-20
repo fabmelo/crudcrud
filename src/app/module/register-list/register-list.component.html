@@ -1,3 +1,21 @@
-<p>
-  register-list works!
-</p>
+<div class="row">
+  <div class="col">
+
+    <button type="button" (click)="onAdd()" class="btn btn-success btn-add">Adicionar Registro</button>
+
+    <ejs-grid #grid [dataSource]='dataSource'>
+      <e-columns>
+        <e-column field='Name' headerText='Nome' textAlign='Left'></e-column>
+        <e-column field='Age' headerText='Idade' textAlign='Left' width="10%"></e-column>
+        <e-column field='City' headerText='Cidade' textAlign='Left'></e-column>
+        <e-column field='_id' headerText='Ações' textAlign='Right' width="30%">
+          <ng-template #template let-data>
+            <button (click)="onDelete(data._id)" class="btn btn-danger btn-grid">EXCLUIR</button>
+            <button (click)="onUpdate(data._id)" class="btn btn-info btn-grid">EDITAR</button>
+          </ng-template>
+        </e-column>
+      </e-columns>
+    </ejs-grid>
+
+  </div>
+</div>

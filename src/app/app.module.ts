@@ -8,6 +8,8 @@ import localePt from "@angular/common/locales/pt";
 
 // modules
 import { AppRoutingModule } from './app-routing.module';
+import { RegisterFormComponent } from './module/register-form/register-form.component';
+import { RegisterListComponent } from './module/register-list/register-list.component';
 
 // components
 import { AppComponent } from './app.component';
@@ -56,11 +58,15 @@ registerLocaleData(localePt);
 // syncfusion
 import { AggregateService, FilterService, GridModule, GroupService, PageService, SearchService, SortService, ToolbarService } from '@syncfusion/ej2-angular-grids';
 import { HttpClientModule } from '@angular/common/http';
+
+// others
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegisterFormComponent,
+    RegisterListComponent
   ],
   imports: [
     CommonModule,
